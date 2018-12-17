@@ -1,3 +1,3 @@
-public class NichtLehrpersonal
+public class NichtLehrpersonal extends Mitarbeiter
 {
 }
