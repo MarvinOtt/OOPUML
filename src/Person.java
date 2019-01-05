@@ -33,5 +33,10 @@ public class Person
     {
         return email;
     }
+
+    public Adresse getAdresse()
+    {
+        return adresse;
+    }
 }
 
