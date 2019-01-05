@@ -14,7 +14,6 @@ public class Person
     {
         return svnr;
     }
-
     public Date getGeburtsdatum()
     {
         return geburtsdatum;
@@ -35,7 +34,7 @@ public class Person
         return email;
     }
 
-    public Adresse getAdresse()
+    private Adresse getAdresse()
     {
         return adresse;
     }

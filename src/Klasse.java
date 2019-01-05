@@ -3,7 +3,6 @@ import java.util.Iterator;
 
 public class Klasse
 {
-    Iterator itr = schueler.iterator();
     private Schueler Klassensprecher;
     private HashSet<Schueler> schueler;
 
@@ -42,13 +41,14 @@ public class Klasse
         schueler.add(newschueler);
         return true;
     }
-    public float getDurchschnittsalter(Schueler schueler)
+    public float getDurchschnittsalter()
     {
 
-        private float gAlter = 0;
+        float gAlter = 0;
+        Iterator itr = this.schueler.iterator();
         while(itr.hasNext())
         {
-            gAlter = gAlter + itr.next().getAlter();
+            gAlter = gAlter + ((Schueler)itr.next()).getAlter();
         }
     }
     public void getStundenplan()
