@@ -8,6 +8,7 @@ public class Person
     private String nachname;
     private Date geburtsdatum;
     private String email;
+    private int alter;
 
     public Long getSvnr()
     {
@@ -37,6 +38,11 @@ public class Person
     public Adresse getAdresse()
     {
         return adresse;
+    }
+
+    public int getAlter()
+    {
+        return alter;
     }
 }
 
