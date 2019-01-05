@@ -2,6 +2,7 @@ import java.util.Date;
 
 public class Person
 {
+    private Adresse adresse;
     private Long svnr;
     private String vorname;
     private String nachname;
