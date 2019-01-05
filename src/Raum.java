@@ -2,10 +2,7 @@ public class Raum
 {
     private String raumNummer;
     private int maxSitzplätze;
-    private enum Raumtyp
-    {
-       KLASSENZIMMER, LABORRAUM
-    }
+
     private Raumtyp raumtyp;
 
 
