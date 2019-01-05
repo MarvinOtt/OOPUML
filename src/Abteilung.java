@@ -10,17 +10,13 @@ public class Abteilung
 	private ArrayList<Lehrer> alllehrer;
 	private HashSet<Schueler> allschueler;
 	
-	public Abteilung()
+	public Abteilung(String name, String kuerzel)
 	{
 		alllehrer = new ArrayList<>();
+		this.name = name;
+		this.kuerzel = kuerzel;
 	}
 	
-	public String getName(){return name;}
-	public String Kuerzel(){return kuerzel;}
-	public ArrayList<Schueler> getSchueler()
-	{
-		return new ArrayList<Schueler>(allschueler);
-	}
 	public boolean addLehrer(Lehrer lehrer)
 	{
 		alllehrer.add(lehrer);
@@ -30,6 +26,17 @@ public class Abteilung
 	{
 		Abteiluingsvorstand = lehrer;
 		return true;
+	}
+	
+	public String getName(){return name;}
+	public String getKuerzel(){return kuerzel;}
+	public ArrayList<Schueler> getSchueler()
+	{
+		return new ArrayList<Schueler>(allschueler);
+	}
+	public ArrayList<Mitarbeiter> getPersonal()
+	{
+		return new ArrayList<Mitarbeiter>(alllehrer);
 	}
 	
 }
