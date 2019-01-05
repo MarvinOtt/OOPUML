@@ -1,13 +1,26 @@
+import java.util.HashSet;
+
 public class Schule
 {
 	private String name;
 	private Long schulkennzahl;
 	private String schultyp;
+	private Adresse adresse;
 	
-	public boolean addPersonal(NichtLehrpersonal NLP)
+	private HashSet<NichtLehrpersonal> allNLP;
+	
+	public Schule()
 	{
-		return false;
+		allNLP = new HashSet<>();
 	}
+	
+	public boolean addPersonal(NichtLehrpersonal nlp)
+	{
+		allNLP.add(nlp);
+		return true;
+	}
+	public Adresse getAdresse(){return adresse;}
+	
 	
 	
 }
