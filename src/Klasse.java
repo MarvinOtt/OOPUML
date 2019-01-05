@@ -3,9 +3,11 @@ import java.util.Iterator;
 
 public class Klasse
 {
-    Iterator itr = schueler.iterator();
-    private Schueler Klassensprecher;
-    private HashSet<Schueler> schueler;
+
+    private Schueler klassensprecher;
+    private Lehrer klassenvorstand;
+    private HashSet<Schueler> schuelerlist;
+    private HashSet<Fach> stundenplan;
 
     private String bezeichnung;
     private int schulstufe;
@@ -13,7 +15,8 @@ public class Klasse
 
     public Klasse()
     {
-         schueler= new HashSet<>();
+         schuelerlist = new HashSet<>();
+         stundenplan = new HashSet<>();
     }
 
     public String getBezeichnung()
@@ -28,30 +31,50 @@ public class Klasse
 
     public Schueler getKlassensprecher()
     {
-        return Klassensprecher;
+        return klassensprecher;
+    }
+
+    public Lehrer getKlassenvorstand()
+    {
+        return klassenvorstand;
     }
 
     public boolean setKlassensprecher(Schueler newKlassensprecher)
     {
-        Klassensprecher=newKlassensprecher;
+        klassensprecher = newKlassensprecher;
+        return true;
+    }
+
+    public boolean setKlassenvorstand(Lehrer newKlassenvorstand)
+    {
+        klassenvorstand = newKlassenvorstand;
         return true;
     }
 
     public boolean addSchueler(Schueler newschueler)
     {
-        schueler.add(newschueler);
+        schuelerlist.add(newschueler);
         return true;
     }
-    public float getDurchschnittsalter(Schueler schueler)
-    {
 
-        private float gAlter = 0;
+    public boolean addFach(Fach newFach)
+    {
+        stundenplan.add(newFach);
+        return true;
+    }
+    public float getDurchschnittsalter()
+    {
+        Iterator itr = schuelerlist.iterator();
+        int schuelercount = schuelerlist.size();
+        float gAlter = 0;
         while(itr.hasNext())
         {
-            gAlter = gAlter + itr.next().getAlter();
+            gAlter = gAlter + ((Schueler)itr.next()).getAlter();
+
         }
+        return(gAlter/(float)schuelercount);
     }
-    public void getStundenplan()
+    public void exportStundenplan()
     {
 
     }
