@@ -1,5 +1,6 @@
 public class Klasse
 {
+
     private String bezeichnung;
     private int schulstufe;
 
