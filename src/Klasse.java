@@ -13,10 +13,7 @@ public class Klasse
         return schulstufe;
     }
 
-    public float getDurchschnittsalter()
-    {
 
-    }
 
     public boolean setKlassensprecher(Schueler schueler)
     {
@@ -25,6 +22,7 @@ public class Klasse
 
     public boolean addSchueler(Schueler schueler)
     {
+
         return true;
     }
     public void getStundenplan()
