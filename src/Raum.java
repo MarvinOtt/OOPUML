@@ -45,5 +45,6 @@ public class Raum
     public boolean addraumbelegung(Belegung newEinheit)
     {
         raumbelegung.add(newEinheit);
+        return true;
     }
 }
