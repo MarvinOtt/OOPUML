@@ -8,6 +8,7 @@ public class Raum
     private Klasse stammklasse;
     private Raumtyp raumtyp;
     static HashSet<Klasse> stammklassenverz;
+    private HashSet<Belegung> raumbelegung;
 
     public Raum()
     {
@@ -40,5 +41,9 @@ public class Raum
            return true;
        }
         return false;
+    }
+    public boolean addraumbelegung(Belegung newEinheit)
+    {
+        raumbelegung.add(newEinheit);
     }
 }
