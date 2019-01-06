@@ -37,7 +37,7 @@ public class Raum
        flag = stammklassenverz.add(newStammklasse);
        if(flag)
        {
-           stammklasse = newStammklasse;
+           this.stammklasse = newStammklasse;
            return true;
        }
         return false;
