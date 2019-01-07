@@ -12,6 +12,7 @@ public class Klasse
     private HashSet<Schueler> schuelerlist;
     private HashSet<Fach> stundenplan;
     private Raum stammklasse;
+    private Abteilung abteilung;
 
     private String bezeichnung;
     private int schulstufe;
@@ -65,7 +66,9 @@ public class Klasse
 
     public boolean addSchueler(Schueler newschueler)
     {
+
         schuelerlist.add(newschueler);
+        abteilung.getSchueler().add(newschueler)
         return true;
     }
 

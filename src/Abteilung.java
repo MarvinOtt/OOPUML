@@ -30,9 +30,9 @@ public class Abteilung
 	
 	public String getName(){return name;}
 	public String getKuerzel(){return kuerzel;}
-	public ArrayList<Schueler> getSchueler()
+	public HashSet<Schueler> getSchueler()
 	{
-		return new ArrayList<Schueler>(allschueler);
+		return allschueler;
 	}
 	public ArrayList<Mitarbeiter> getPersonal()
 	{
