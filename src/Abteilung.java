@@ -6,8 +6,7 @@ public class Abteilung
 {
 	private String kuerzel;
 	private String name;
-	private Lehrer abteiluingsvorstand;
-	private Schueler abteilungssprecher;
+	private Lehrer Abteiluingsvorstand;
 	private ArrayList<Lehrer> alllehrer;
 	private HashSet<Schueler> allschueler;
 	
@@ -25,12 +24,7 @@ public class Abteilung
 	}
 	public boolean setAbteilungsvorstand(Lehrer lehrer)
 	{
-		abteiluingsvorstand = lehrer;
-		return true;
-	}
-	public boolean setAbteilungssprecher(Schueler schueler)
-	{
-		abteilungssprecher = schueler;
+		Abteiluingsvorstand = lehrer;
 		return true;
 	}
 	

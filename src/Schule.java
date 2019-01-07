@@ -34,6 +34,14 @@ public class Schule
 	}
 	public boolean setDirector(Lehrer director)
 	{
+		Iterator itr = abteilungen.iterator();
+		while(itr.hasNext())
+		{
+			if(((Abteilung)itr.next()).getAbteilungsvorstand() == director)
+			{
+				return false;
+			}
+		}
 		this.director = director;
 		return true;
 	}

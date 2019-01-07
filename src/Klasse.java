@@ -53,13 +53,13 @@ public class Klasse
 
     public boolean setKlassensprecher(Schueler newKlassensprecher)
     {
-        klassensprecher = newKlassensprecher;
+        this.klassensprecher = newKlassensprecher;
         return true;
     }
 
     public boolean setKlassenvorstand(Lehrer newKlassenvorstand)
     {
-        klassenvorstand = newKlassenvorstand;
+        this.klassenvorstand = newKlassenvorstand;
         return true;
     }
 
