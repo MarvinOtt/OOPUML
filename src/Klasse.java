@@ -11,21 +11,21 @@ public class Klasse
     private Lehrer klassenvorstand;
     private HashSet<Schueler> schuelerlist;
     private HashSet<Fach> stundenplan;
-    private Raum stammklasse;
+    private Raum stammraum;
     private Abteilung abteilung;
 
     private String bezeichnung;
     private int schulstufe;
 
 
-    public Klasse(String bezeichnung, int schulstufe, Raum stammklasse)
+    public Klasse(String bezeichnung, int schulstufe, Raum stammraum, Abteilung abteilung)
     {
         this.bezeichnung = bezeichnung;
         this.schulstufe = schulstufe;
-        
+        this.abteilung = abteilung;
         // Checking Stammklasse
-        if(stammklasse.setStammklasse(this))
-            this.stammklasse = stammklasse;
+        if(stammraum.setStammklasse(this))
+            this.stammraum = stammraum;
         else
             throw new IllegalArgumentException("Stammklasse ist schon belegt!");
         schuelerlist = new HashSet<>();
