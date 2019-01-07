@@ -11,6 +11,7 @@ public class Main
 		
 		Schueler schueler1 = new Schueler("S 1");
 		Raum W120 = new Raum("W120");
+		Klasse HELS = EL.addKlasse("BHELS",4,W120);
 		
 		Klasse _4BHELS = new Klasse("4BHELS", 4, W120);
 		Klasse _4AHELS = new Klasse("4AHELS", 4, W120, EL);
