@@ -13,6 +13,8 @@ public class Schule
 	private Lehrer director;
 	private HashSet<Abteilung> abteilungen;
 	
+	
+	
 	private HashSet<NichtLehrpersonal> allNLP;
 	
 	public Schule()
@@ -23,8 +25,7 @@ public class Schule
 	
 	public boolean addPersonal(NichtLehrpersonal nlp)
 	{
-		allNLP.add(nlp);
-		return true;
+		return allNLP.add(nlp);
 	}
 	public Abteilung addAbteilung(String name, String kuerzel)
 	{
