@@ -13,10 +13,10 @@ public class Main
 		Raum W120 = new Raum("W120");
 		Klasse HELS = EL.addKlasse("BHELS",4,W120);
 		
-		Klasse _4BHELS =
-		Klasse _4AHELS = new Klasse("4AHELS", 4, W120, EL);
+		Klasse _4BHELS = EL.addKlasse("4BHELS", 3, W120);
+		Klasse _4AHELS = EL.addKlasse("4AHELS", 3, W120);
 		_4BHELS.addFach(fach1);
 		_4BHELS.addSchueler(schueler1);
-		//_4BHELS.exportStundenplan();
+		_4BHELS.exportStundenplan();
 	}
 }
