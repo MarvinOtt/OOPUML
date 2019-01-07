@@ -72,11 +72,6 @@ public class Klasse
         return true;
     }
 
-    public boolean addFach(Fach newFach)
-    {
-        stundenplan.add(newFach);
-        return true;
-    }
     public float getDurchschnittsalter()
     {
         Iterator itr = schuelerlist.iterator();
