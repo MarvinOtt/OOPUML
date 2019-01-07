@@ -21,4 +21,9 @@ public class Belegung
     {
         return tag;
     }
+    
+    public String getBelegungsstring()
+    {
+        return "Fach: " + unterrichtsfach.getName() + " | " + "Tag: " + tag.name() + " | " + "Stunde " + unterrichtseinheit + " | " + "Klasse: " + klasse.getBezeichnung() + " | " + "Lehrer: " + lehrer.getKuerzel();
+    }
 }

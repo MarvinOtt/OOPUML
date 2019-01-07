@@ -9,6 +9,18 @@ public class Person
     private Date geburtsdatum;
     private String email;
     private int alter;
+    
+    public Person(String name)
+    {
+        if(name.contains(" "))
+        {
+            String[] parts = name.split(" ");
+            vorname = parts[0];
+            nachname = parts[1];
+        }
+        else
+            throw new IllegalArgumentException("Name is not valid");
+    }
 
     public Long getSvnr()
     {

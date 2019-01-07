@@ -1,3 +1,6 @@
+import com.sun.javaws.exceptions.InvalidArgumentException;
+
+import java.io.*;
 import java.util.HashSet;
 import java.util.Iterator;
 
@@ -8,15 +11,24 @@ public class Klasse
     private Lehrer klassenvorstand;
     private HashSet<Schueler> schuelerlist;
     private HashSet<Fach> stundenplan;
+    private Raum stammklasse;
 
     private String bezeichnung;
     private int schulstufe;
 
 
-    public Klasse()
+    public Klasse(String bezeichnung, int schulstufe, Raum stammklasse)
     {
-         schuelerlist = new HashSet<>();
-         stundenplan = new HashSet<>();
+        this.bezeichnung = bezeichnung;
+        this.schulstufe = schulstufe;
+        
+        // Checking Stammklasse
+        if(stammklasse.setStammklasse(this))
+            this.stammklasse = stammklasse;
+        else
+            throw new IllegalArgumentException("Stammklasse ist schon belegt!");
+        schuelerlist = new HashSet<>();
+        stundenplan = new HashSet<>();
     }
 
     public String getBezeichnung()
@@ -76,7 +88,34 @@ public class Klasse
     }
     public void exportStundenplan()
     {
-
+        Writer writer = null;
+        try {
+            writer = new BufferedWriter(new OutputStreamWriter(
+                    new FileOutputStream(bezeichnung + "_Stundenplan.txt"), "utf-8"));
+    
+    
+    
+            for(int i = 0; i < Raum.alleräume.size(); ++i)
+            {
+                Belegung[] belegungen = (Belegung[])Raum.alleräume.get(i).GetalleBelegungen().toArray();
+                for(int j = 0; j < belegungen.length; ++j)
+                {
+                    if(belegungen[j].getKlasse().equals(this))
+                    {
+                        writer.write(belegungen[j].getBelegungsstring());
+                        ((BufferedWriter) writer).newLine();
+                    }
+                }
+            }
+            
+            
+        } catch (IOException ex) {
+            // Report
+        } finally {
+            try {writer.close();} catch (Exception ex) {/*ignore*/}
+        }
+        
     }
+    
 
 }

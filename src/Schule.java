@@ -84,6 +84,17 @@ public class Schule
 	}
 	public Adresse getAdresse(){return adresse;}
 	public Schueler getSchulsprecher(){return schulsprecher;}
+	public Abteilung getAbteilungwithname(String name)
+	{
+		Abteilung[] abt = new Abteilung[abteilungen.size()];
+		abt = abteilungen.toArray(abt);
+		for(int i = 0; i < abt.length; ++i)
+		{
+			if(abt[i].getName().equals(name))
+				return abt[i];
+		}
+		return null;
+	}
 	
 	
 	

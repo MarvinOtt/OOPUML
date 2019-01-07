@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
 
@@ -8,11 +9,14 @@ public class Raum
     private Klasse stammklasse;
     private Raumtyp raumtyp;
     static HashSet<Klasse> stammklassenverz;
+    static ArrayList<Raum> alleräume = new ArrayList<>();
     private HashSet<Belegung> raumbelegung;
 
-    public Raum()
+    public Raum(String raumnummer)
     {
+        this.raumNummer = raumnummer;
         stammklassenverz = new HashSet<>();
+        alleräume.add(this);
     }
 
 
@@ -35,7 +39,7 @@ public class Raum
         boolean flag;
 
        flag = stammklassenverz.add(newStammklasse);
-       if(flag)
+       if(flag && (stammklasse == null || !stammklasse.equals(newStammklasse)))
        {
            stammklasse = newStammklasse;
            return true;
@@ -46,5 +50,9 @@ public class Raum
     {
         raumbelegung.add(newEinheit);
         return true;
+    }
+    public HashSet<Belegung> GetalleBelegungen()
+    {
+        return raumbelegung;
     }
 }
