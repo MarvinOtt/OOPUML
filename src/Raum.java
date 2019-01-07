@@ -36,10 +36,10 @@ public class Raum
     }
     public boolean setStammklasse(Klasse newStammklasse)
     {
-        boolean flag;
+       boolean flag;
 
        flag = stammklassenverz.add(newStammklasse);
-       if(flag && (stammklasse == null || !stammklasse.equals(newStammklasse)))
+       if(flag && stammklasse == null)
        {
            this.stammklasse = newStammklasse;
            return true;
