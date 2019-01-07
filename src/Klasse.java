@@ -68,7 +68,7 @@ public class Klasse
     {
 
         schuelerlist.add(newschueler);
-        abteilung.getSchueler().add(newschueler)
+        abteilung.getSchueler().add(newschueler);
         return true;
     }
 
