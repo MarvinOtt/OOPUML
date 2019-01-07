@@ -9,7 +9,6 @@ public class Abteilung
 	private Lehrer Abteilungsvorstand;
 	private ArrayList<Lehrer> alllehrer;
 	private HashSet<Schueler> allschueler;
-	private Schule schule;
 	
 	public Abteilung(String name, String kuerzel)
 	{
