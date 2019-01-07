@@ -9,14 +9,20 @@ public class Abteilung
 	private Lehrer Abteilungsvorstand;
 	private ArrayList<Lehrer> alllehrer;
 	private HashSet<Schueler> allschueler;
-	
+	private HashSet<Klasse> allklassen;
+
 	public Abteilung(String name, String kuerzel)
 	{
 		alllehrer = new ArrayList<>();
 		this.name = name;
 		this.kuerzel = kuerzel;
 	}
-	
+	public Klasse addKlasse(String name, int schulstufe, Raum stammraum)
+	{
+		Klasse newKlasse = new Klasse(name, schulstufe, stammraum,this);
+		allklassen.add(newKlasse);
+		return newKlasse;
+	}
 	public boolean addLehrer(Lehrer lehrer)
 	{
 		alllehrer.add(lehrer);
