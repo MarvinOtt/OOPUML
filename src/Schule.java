@@ -29,7 +29,7 @@ public class Schule
 	}
 	public Abteilung addAbteilung(String name, String kuerzel)
 	{
-		Abteilung newabteilung = new Abteilung(name, kuerzel);
+		Abteilung newabteilung = new Abteilung(name, kuerzel, this);
 		abteilungen.add(newabteilung);
 		return newabteilung;
 	}
@@ -57,6 +57,7 @@ public class Schule
 		return true;
 	}
 	
+	public Lehrer getDirector(){return director;}
 	public Long getSchulkennzahl(){return schulkennzahl;}
 	public String getName(){return name;}
 	public String getSchultyp(){return schultyp;}

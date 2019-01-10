@@ -3,8 +3,10 @@ public class Main
 	public static void main(String[] args)
 	{
 		Schule HTL = new Schule();
-		Abteilung EL = HTL.addAbteilung("Elektronik", "EL");
 		Lehrer lehr1 = new Lehrer("ABAK", "aopefjm rg");
+		Abteilung EL = HTL.addAbteilung("Elektronik", "EL");
+		boolean bbb = EL.setAbteilungsvorstand(lehr1);
+		boolean aaa = HTL.setDirector(lehr1);
 		Fach fach1 = new Fach("Mathe", 3, Raumtyp.KLASSENZIMMER);
 		EL.addLehrer(lehr1);
 		
