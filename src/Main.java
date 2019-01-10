@@ -18,7 +18,7 @@ public class Main
 		W120.addraumbelegung(new Belegung(4, Unterrichtstag.MITTWOCH, fach1, _4BHELS, lehr1));
 		W120.addraumbelegung(new Belegung(1, Unterrichtstag.DIENTSTAG, fach1, _4BHELS, lehr1));
 		_4BHELS.exportStundenplan();
-		int x = 0;
-		//_4BHELS.exportStundenplan();
+		lehr1.exportStundenplan();
+
 	}
 }
