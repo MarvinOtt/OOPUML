@@ -10,7 +10,7 @@ public class Belegung
     {
         this.unterrichtseinheit = unterrichtseinheit;
         this.tag = tag;
-        this.unterrichtseinheit = unterrichtseinheit;
+        this.unterrichtsfach = unterrichtsfach;
         this.klasse = klasse;
         this.lehrer = lehrer;
     }

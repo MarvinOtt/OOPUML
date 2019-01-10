@@ -16,6 +16,7 @@ public class Raum
     {
         this.raumNummer = raumnummer;
         stammklassenverz = new HashSet<>();
+        raumbelegung = new HashSet<>();
         alleräume.add(this);
     }
 

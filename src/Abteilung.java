@@ -14,6 +14,8 @@ public class Abteilung
 	public Abteilung(String name, String kuerzel)
 	{
 		alllehrer = new ArrayList<>();
+		allklassen = new HashSet<>();
+		allschueler = new HashSet<>();
 		this.name = name;
 		this.kuerzel = kuerzel;
 	}

@@ -95,7 +95,9 @@ public class Klasse
     
             for(int i = 0; i < Raum.alleräume.size(); ++i)
             {
-                Belegung[] belegungen = (Belegung[])Raum.alleräume.get(i).GetalleBelegungen().toArray();
+                Belegung[] belegungen = new Belegung[Raum.alleräume.get(i).GetalleBelegungen().size()];
+                belegungen = Raum.alleräume.get(i).GetalleBelegungen().toArray(belegungen);
+                //Belegung[] belegungen = (Belegung[])Raum.alleräume.get(i).GetalleBelegungen().toArray();
                 for(int j = 0; j < belegungen.length; ++j)
                 {
                     if(belegungen[j].getKlasse().equals(this))
