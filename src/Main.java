@@ -6,17 +6,17 @@ public class Main
 		Abteilung EL = HTL.addAbteilung("Elektronik", "EL");
 		Lehrer lehr1 = new Lehrer("ABAK", "aopefjm rg");
 		Fach fach1 = new Fach("Mathe", 3, Raumtyp.KLASSENZIMMER);
-		lehr1.addFach(fach1);
 		EL.addLehrer(lehr1);
 		
 		Schueler schueler1 = new Schueler("S 1");
 		Raum W120 = new Raum("W120");
 		Klasse HELS = EL.addKlasse("BHELS",4,W120);
 		
-		Klasse _4BHELS = new Klasse("4BHELS", 4, W120);
+		Klasse _4BHELS = new Klasse("4BHELS", 4, W120, EL);
 		Klasse _4AHELS = new Klasse("4AHELS", 4, W120, EL);
-		_4BHELS.addFach(fach1);
 		_4BHELS.addSchueler(schueler1);
+		W120.addraumbelegung(new Belegung(3, Unterrichtstag.DIENTSTAG, fach1, _4BHELS, lehr1));
+		_4BHELS.exportStundenplan();
 		//_4BHELS.exportStundenplan();
 	}
 }

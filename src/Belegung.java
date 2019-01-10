@@ -5,7 +5,15 @@ public class Belegung
     Unterrichtstag tag;
     Klasse klasse;
     Lehrer lehrer;
-
+    
+    public Belegung(int unterrichtseinheit, Unterrichtstag tag, Fach unterrichtsfach, Klasse klasse, Lehrer lehrer)
+    {
+        this.unterrichtseinheit = unterrichtseinheit;
+        this.tag = tag;
+        this.unterrichtseinheit = unterrichtseinheit;
+        this.klasse = klasse;
+        this.lehrer = lehrer;
+    }
 
     public Lehrer getLehrer()
     {
