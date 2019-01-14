@@ -4,6 +4,14 @@ public class Adresse
 	private String strasse;
 	private Integer hausnummer;
 	private Integer plz;
+
+	public  Adresse(String ort, String strasse, Integer hausnummer, Integer plz)
+	{
+		this.ort = ort;
+		this.strasse = strasse;
+		this.hausnummer = hausnummer;
+		this.plz = plz;
+	}
 	
 	public String getOrt(){return ort;}
 	
