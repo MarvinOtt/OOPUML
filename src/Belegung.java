@@ -39,6 +39,6 @@ public class Belegung
     
     public String getBelegungsstring()
     {
-        return "Raum:" + raum.getRaumNummer() + " | " + "Fach: " + unterrichtsfach.getName() + " | " + "Tag: " + tag.name() + " | " + "Stunde " + unterrichtseinheit + " | " + "Klasse: " + klasse.getBezeichnung() + " | " + "Lehrer: " + lehrer.getKuerzel();
+        return "Tag: " + tag.name() + " | " + "Stunde " + unterrichtseinheit + " | " + "Raum:" + raum.getRaumNummer() + " | " + "Klasse: " + klasse.getBezeichnung() +  " | " + "Fach: " + unterrichtsfach.getName() + " | "     + "Lehrer: " + lehrer.getKuerzel();
     }
 }
