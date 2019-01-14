@@ -49,6 +49,7 @@ public class Raum
     }
     public boolean addraumbelegung(Belegung newEinheit)
     {
+        newEinheit.SetRaum(this);
         raumbelegung.add(newEinheit);
         return true;
     }

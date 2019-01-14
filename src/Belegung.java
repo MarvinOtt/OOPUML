@@ -5,6 +5,7 @@ public class Belegung
     Unterrichtstag tag;
     Klasse klasse;
     Lehrer lehrer;
+    Raum raum;
     
     public Belegung(int unterrichtseinheit, Unterrichtstag tag, Fach unterrichtsfach, Klasse klasse, Lehrer lehrer)
     {
@@ -13,6 +14,12 @@ public class Belegung
         this.unterrichtsfach = unterrichtsfach;
         this.klasse = klasse;
         this.lehrer = lehrer;
+    }
+
+    public boolean SetRaum(Raum raum)
+    {
+        this.raum = raum;
+        return true;
     }
 
     public Lehrer getLehrer()
@@ -32,6 +39,6 @@ public class Belegung
     
     public String getBelegungsstring()
     {
-        return "Fach: " + unterrichtsfach.getName() + " | " + "Tag: " + tag.name() + " | " + "Stunde " + unterrichtseinheit + " | " + "Klasse: " + klasse.getBezeichnung() + " | " + "Lehrer: " + lehrer.getKuerzel();
+        return "Raum:" + raum.getRaumNummer() + " | " + "Fach: " + unterrichtsfach.getName() + " | " + "Tag: " + tag.name() + " | " + "Stunde " + unterrichtseinheit + " | " + "Klasse: " + klasse.getBezeichnung() + " | " + "Lehrer: " + lehrer.getKuerzel();
     }
 }
