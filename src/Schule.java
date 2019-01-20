@@ -17,8 +17,9 @@ public class Schule
 	
 	private HashSet<NichtLehrpersonal> allNLP;
 	
-	public Schule()
+	public Schule(String name)
 	{
+		this.name = name;
 		allNLP = new HashSet<>();
 		abteilungen = new HashSet<>();
 	}

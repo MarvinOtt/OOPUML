@@ -40,7 +40,7 @@ public class Abteilung
 			return false;
 		return true;
 	}
-	
+	public ArrayList<Lehrer> getAlllehrer(){return alllehrer;}
 	public String getName(){return name;}
 	public String getKuerzel(){return kuerzel;}
 	public HashSet<Schueler> getSchueler()

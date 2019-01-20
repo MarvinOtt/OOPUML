@@ -71,6 +71,10 @@ public class Klasse
         abteilung.getSchueler().add(newschueler);
         return true;
     }
+    public boolean addBelegung(Belegung newEinheit, Raum raum)
+    {
+        return raum.addBelegung(newEinheit);
+    }
 
     public float getDurchschnittsalter()
     {
