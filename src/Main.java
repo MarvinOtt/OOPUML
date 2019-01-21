@@ -35,6 +35,8 @@ public class Main
 			Raeume[i] = new Raum("W" + (i / 10) + (i % 10), Raumtyp.KLASSENZIMMER);
 		}
 		
+		int failedbelegungen = 0, successfulbelegungen = 0;
+		
 		// Generating HTL
 		Schule HTL = new Schule("HTL");
 		for(int i = 0; i < Abteilung_names.length; ++i)
@@ -65,18 +67,24 @@ public class Main
 					{
 						for(int y = 0; y < 10; ++y) // Stunde
 						{
-							currentclass.addBelegung(new Belegung(y, Unterrichtstag.values()[r.nextInt(5)], faecher[r.nextInt(faecher.length)], currentclass, allteachers[r.nextInt(allteachers.length)]), Raeume[r.nextInt(Raeume.length)]);
+							boolean Worked = currentclass.addBelegung(new Belegung(y, Unterrichtstag.values()[r.nextInt(5)], faecher[r.nextInt(faecher.length)], currentclass, allteachers[r.nextInt(allteachers.length)]), Raeume[r.nextInt(Raeume.length)]);
+							if(!Worked)
+								failedbelegungen++;
+							else
+								successfulbelegungen++;
 						}
 					}
 					currentclass.exportStundenplan();
 				}
+				// Stundenplan der Lehrer exportieren
 				for(int i2 = 0; i2 < allteachers.length; ++i2)
 				{
 					allteachers[i2].exportStundenplan();
 				}
 			}
 		}
-		
+		System.out.println("Failed Belegungen: " + failedbelegungen);
+		System.out.println("Successful Belegungen: " + successfulbelegungen);
 		
 		
 		
